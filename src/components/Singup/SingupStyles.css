@@ -1,0 +1,43 @@
+.form-SingUp-Container{
+    padding: 1.5rem;
+    background-color: rgba(243, 189, 96, 0.436);
+    border-radius: 15px;
+    color: white;
+    font-style: oblique;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: -10px 10px 6px rgba(239, 142, 45, 0.515);
+
+}
+.form-SingUp-Container input{
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 50px;
+    border: 0;
+}
+.btn-form{
+    background-color: rgba(207, 156, 213, 0.781) !important;
+    border: 0 !important;
+    padding: 10px !important;
+    width: 100%;
+}
+.btn-form:hover{
+    background-color: rgba(200, 46, 217, 0.781) !important;
+}
+
+Button:active{
+    transform: translateY(1px);
+}
+
+.login-options {
+    text-align: center;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .social-icons .ico:active {
+    transform: translateY(2px);
+  }
