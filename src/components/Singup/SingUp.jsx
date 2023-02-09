@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { Form , Button } from 'react-bootstrap';
 import './SingupStyles.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebook,  faGoogle } from "@fortawesome/free-brands-svg-icons"
 import { useNavigate  } from 'react-router-dom';
-
+import { signInWithPopup, FacebookAuthProvider } from 'firebase/auth'
+import { authentication } from '../../services/firebase'
 
 export default function SingUp() {
   const navigate  = useNavigate ();
 
-  const [userData, setUserData] = useState({ username: '', email: '' });
+  const [userData, setUserData] = useState({ username: '', email: '', imgUrl: ''  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('User: ', userData);
-    navigate(`/Fefeeded/${userData.username}`);
+    navigate(`/feed/${userData.username}`);
   };
 
   const isFormValid = () => {
@@ -24,8 +23,21 @@ export default function SingUp() {
   };
 
 
+const singInWithFB = async () => {
+  const provider = new FacebookAuthProvider();
+  await signInWithPopup(authentication , provider)
+  .then( (res)=> { 
+    let dataUser = res.user.providerData[0]
+    setUserData({...userData, username: dataUser.displayName, email: dataUser.email, imgUrl: dataUser.photoURL})
+    navigate(`/feed/${dataUser.displayName}`);
+  })
+  .catch( (err)=> console.log(err))
+}  
+
+
+
   return (
-    <div className='col-4 form-SingUp-Container'> 
+    <div className='col form-SingUp-Container'> 
 
     <div className='justify-content-start d-flex'> 
     <h4>Ingresa al Feed.</h4>
@@ -56,8 +68,7 @@ export default function SingUp() {
     <div className="login-options mt-4">
   <h4>También puedes ingresar con:</h4>
   <div className="social-icons">
-  <FontAwesomeIcon icon={faGoogle} color='red' size='2x' className=' ico bg-light' style={{marginRight:'25px',borderRadius:'50%' }}/>
-  <FontAwesomeIcon icon={faFacebook} color='blue' size='2x' className='ico bg-light' style={{borderRadius:'50%' }}/>
+  <button onClick={singInWithFB} className='auth-fb'> Ingresa con Facebook </button>
   </div>
 </div>
 

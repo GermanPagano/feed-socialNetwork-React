@@ -1,5 +1,6 @@
 .form-SingUp-Container{
     padding: 1.5rem;
+    max-width: 400px;
     background-color: rgba(243, 189, 96, 0.436);
     border-radius: 15px;
     color: white;
@@ -7,6 +8,7 @@
     font-weight: 700;
     font-size: 18px;
     box-shadow: -10px 10px 6px rgba(239, 142, 45, 0.515);
+
 
 }
 .form-SingUp-Container input{
@@ -16,7 +18,7 @@
     border: 0;
 }
 .btn-form{
-    background-color: rgba(207, 156, 213, 0.781) !important;
+    background-color: rgba(224, 139, 233, 0.918) !important;
     border: 0 !important;
     padding: 10px !important;
     width: 100%;
@@ -40,4 +42,18 @@ Button:active{
   }
   .social-icons .ico:active {
     transform: translateY(2px);
+  }
+
+  .auth-fb{
+    border: none;
+    background-color: rgba(0, 0, 255, 0.75);
+    font-weight: 500;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px !important;
+  }
+  .auth-fb:hover{
+    background-color: white;
+    color: blue;
   }

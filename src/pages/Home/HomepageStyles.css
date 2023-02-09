@@ -12,6 +12,7 @@
 }
 .text-container {
     display: block;
+    -webkit-text-stroke: 0.1rem rgba(0, 0, 0, 0.274);
 }
 /*
 .home-text{
@@ -34,7 +35,8 @@
     }
 
     .text-container {
-        background-color: tomato;
+        color: rgb(251, 251, 251);
+        -webkit-text-stroke: 1px black;
         display: flex;
         align-self: center;
         justify-content: center;
