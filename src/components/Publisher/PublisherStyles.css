@@ -123,6 +123,7 @@
   .post-user-info {
     display: flex;
     flex-direction: column;
+
   }
   
   .post-username {
@@ -144,6 +145,9 @@
   .post-text {
     font-size: 1.1rem;
     margin: 0;
+    text-align:justify;
+    line-break:auto;
+    padding: 2rem;
   }
   
   .post-image {
