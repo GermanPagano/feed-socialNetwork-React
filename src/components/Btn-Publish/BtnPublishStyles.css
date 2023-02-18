@@ -1,0 +1,14 @@
+.comment-box-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  .comment-box-button:active{
+    transform: translateY(2px);
+  }

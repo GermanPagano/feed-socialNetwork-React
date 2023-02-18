@@ -1,0 +1,9 @@
+.nav-container{
+    background-color: #21212c;
+    font-weight: 700;
+    color: white
+}
+.brand{
+    color: white !important;
+    padding: 1rem;
+}

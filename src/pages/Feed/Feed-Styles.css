@@ -1,0 +1,127 @@
+.container-feed {
+  background-color: #272734;
+  border-radius: 15px;
+  overflow: hidden; /* ocultar barras de desplazamiento en la página completa */
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container-feed a {
+  text-decoration: none;
+}
+.col {
+  color: white;
+}
+.title-hash {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: #4e4e5d56;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.hash-container {
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  background-color: #4e4e5d56;
+  margin-bottom: 1rem;
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.hash-container:hover {
+  background-color: #34343550;
+  color: rgb(255, 255, 255);
+}
+
+.data-user {
+  background-color: #4e4e5d56;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.comment-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgba(255, 248, 220, 0.533);
+}
+
+.comment-box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-box-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-box-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-box-username {
+  margin: 0;
+}
+
+.comment-box-textarea {
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-box-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-box-icons i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
+#image-input {
+  margin-right: 1rem;
+  min-height: 45px;
+}
+
+#image-input:active {
+  transform: translateY(2px);
+}
+.comment-box-footer {
+  max-height: 45px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.imgPost img {
+  max-width: 100%;
+  max-height: 500px;
+
+}

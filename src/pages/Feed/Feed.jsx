@@ -1,24 +1,37 @@
-import React ,{ useContext } from 'react'
-import { UserContext } from "../../storage/UserContext";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Feed-Styles.css";
+import Publisher from "../../components/Publisher/Publisher";
 
-function Feed(props) {
- 
-  const context = useContext(UserContext);
-  const { username , email , imgUrl} = context.userData
-
+function Feed() {
   return (
-    <div>
-      soy el contenedor del feed
+    <div className="container container-feed col-10 ">
 
-      <div>
-      <h3>Nombre de usuario: {username}</h3>
-      <h4>Email: {email}</h4>
-      <img src={imgUrl} alt='foto'/>
+      <div className="col col-2 ">
+        <div className=" title-hash ">#Explorar</div>
+        <Link to={"https://www.linkedin.com/in/gerhpagano/"}>
+          <div className="hash-container ">#Linkedin</div>
+        </Link>
+        <Link to={"https://german-pagano-portfolio.netlify.app/index.html"}>
+          <div className="hash-container ">#Portfolio</div>
+        </Link>
+        <Link to={"https://github.com/GermanPagano"}>
+          <div className="hash-container">#Git</div>
+        </Link>
+        <Link to={"https://git.com"}>
+          <div className="hash-container">#otrohash</div>
+        </Link>
+        <Link to={"https://git.com"}>
+          <div className="hash-container">#unomas</div>
+        </Link>
+      </div>
+
+      <Publisher/>
+
+      <div className="col col-3 data-user ">info</div>
+
     </div>
-
-
-    </div>
-  )
+  );
 }
 
-export default Feed
+export default Feed;

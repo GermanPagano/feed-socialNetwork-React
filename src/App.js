@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import Feed from './pages/Feed/Feed';
 import { UserProvider } from "./storage/UserContext";
+import Nav from './components/Nav/Nav';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <UserProvider>
     <div className="App">
       <BrowserRouter>
+      <Nav/>
           <Routes>
             <Route path="/" exact element={<HomePage />} />
             <Route path="/feed/:username" element={<Feed/>} />
