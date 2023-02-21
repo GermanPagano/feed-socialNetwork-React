@@ -3,6 +3,8 @@ import BtnPublish from "../../components/Btn-Publish/BtnPublish";
 import { UserContext } from "../../storage/UserContext";
 import "./PublisherStyles.css";
 import { BsFillCameraFill } from "react-icons/bs";
+import { AiFillLike } from "react-icons/ai";
+
 
 function Publisher() {
   const context = useContext(UserContext);
@@ -14,20 +16,6 @@ function Publisher() {
   const [post, setPost] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
 
-  // useEffect(() => {
-  //     const handleScroll = (event) => {
-  //       const deltaY = event.deltaY;
-  //       const muro = muroRef.current;
-  //       muro.scrollBy({
-  //         top: deltaY,
-  //         behavior: "smooth",
-  //       });
-  //     };
-  //     window.addEventListener("wheel", handleScroll);
-  //     return () => {
-  //       window.removeEventListener("wheel", handleScroll);
-  //     };
-  //   }, []);
 
   const handlePublisher = () => {
     const textValue = textareaRef.current.value;
@@ -54,6 +42,7 @@ function Publisher() {
 
   };
 
+
   return (
     <div className="col col-6  muro " ref={muroRef}>
       <div className="publisher">
@@ -64,7 +53,7 @@ function Publisher() {
               className="comment-box-avatar"
               src={imgUrl}
               alt="foto de perfil"
-            />
+            />            
             <div className="comment-box-user-info">
               <h5 className="comment-box-username">{username}</h5>
             </div>
@@ -121,6 +110,10 @@ function Publisher() {
           alt="Imagen publicada"
         />
       )}
+    </div>
+    <div className="container btn-actions-post">
+    <button class="like-button">👍</button>
+  <button class="dislike-button">👎</button>
     </div>
   </div>
 ))}
