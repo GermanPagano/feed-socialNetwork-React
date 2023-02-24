@@ -76,12 +76,12 @@
   cursor: pointer;
 }
 
-#image-input {
+#camera-icon {
   margin-right: 1rem;
   min-height: 45px;
 }
 
-#image-input:active {
+#camera-icon:active {
   transform: translateY(2px);
 }
 .comment-box-footer {

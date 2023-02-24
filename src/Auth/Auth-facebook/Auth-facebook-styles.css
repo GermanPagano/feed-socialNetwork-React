@@ -1,0 +1,14 @@
+.auth-fb {
+  border: none;
+  background-color: #1877f2;
+  color: #fff;
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px !important;
+}
+.auth-fb:hover {
+  background-color: #166fe5;
+  color: white;
+}

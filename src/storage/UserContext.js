@@ -1,32 +1,42 @@
 import React, { createContext, useState, useEffect } from "react";
+
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
+  // usuario , con su informacion
   const [userData, setUserData] = useState({
     username: "",
     email: "",
     imgUrl: "",
+    age: "",
+    country: "",
+    city:"",
+    description: "",
+    postCreated : [],
   });
 
-  const LoggIn = (facebookData) => {
-    console.log(facebookData);
+  // iniciar sesion 
+  const LoggIn = (infoUser, userName ) => {
+    console.log(infoUser);
     setUserData({
       ...userData,
-      username: facebookData.displayName,
-      email: facebookData.email,
-      imgUrl: facebookData.photoURL,
+      username: infoUser.displayName ? infoUser.displayName : userName,
+      email: infoUser.email,
+      imgUrl: infoUser.photoURL,
+      
     });
-
+    
     // Guardar los datos del usuario en localStorage
     localStorage.setItem(
       "userData",
       JSON.stringify({
-        username: facebookData.displayName,
-        email: facebookData.email,
-        imgUrl: facebookData.photoURL,
+      username: infoUser.displayName ? infoUser.displayName : userName,
+      email: infoUser.email,
+      imgUrl: infoUser.photoURL,
       })
     );
   };
+
 
   useEffect(() => {
     const userDataFromLocalStorage = localStorage.getItem("userData");
@@ -36,15 +46,18 @@ export const UserProvider = (props) => {
   }, []);
 
 
-
-  const logout = () => {
+// cerrar sesion 
+  const logout = async() => {
     localStorage.removeItem('userData');
+    
     setUserData({
       username: "",
       email: "",
       imgUrl: "",
     });
   };
+
+  //registrarse
 
   return (
     <UserContext.Provider value={{ userData, LoggIn , logout }}>

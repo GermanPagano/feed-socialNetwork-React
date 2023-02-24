@@ -1,0 +1,19 @@
+.profile-container{
+    background-color: rgb(255, 248, 220);
+}
+.btn-return{
+    border-radius: 5px;
+    border: 0;
+    min-width: 80px;
+    background-color: rgb(4, 185, 4);
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.btn-return:hover{
+    background-color: #ff8d02;
+}
+.btn-return:active{
+    transform: translateY(3px);
+}

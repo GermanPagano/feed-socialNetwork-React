@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    color: rgb(97, 97, 96);
+  }
+  
+  .form-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F2F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-register label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-register input[type="text"],
+  .form-register input[type="email"],
+  .form-register input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #E5E5E5;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-register button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f7b63d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .form-register button:hover {
+    background-color: #F7CD05;
+  }
+  
+  .form-register input[type="text"]:focus,
+  .form-register input[type="email"]:focus,
+  .form-register input[type="password"]:focus {
+    outline: none;
+    background-color: #DADADA;
+  }
+  

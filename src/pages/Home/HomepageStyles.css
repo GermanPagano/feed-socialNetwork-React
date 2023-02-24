@@ -2,8 +2,7 @@
     min-width: 100%;
     background-color: #504b4618;
     display: flex;
-    color: white;
-    text-shadow: 1px 0px 21px rgb(255, 132, 0);
+    color: white !important;
     font-style: oblique;
     font-weight: 700;
     padding: 3rem;

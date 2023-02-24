@@ -45,29 +45,11 @@ export default function SingUp() {
       <div className="justify-content-start d-flex">
         <h4>Ingresa al Feed.</h4>
       </div>
-      {/* <Form onSubmit={handleSubmit}>
-      <Form.Group className='justify-content-center d-flex'>
 
-        <Form.Control
-          type="text"
-          value={userData.username}
-          onChange={(event) =>  setUserData({ ...userData, username: event.target.value })}
-          placeholder='Nombre'
-        />
-      </Form.Group>
-      <Form.Group className='justify-content-center d-flex'>
-        <Form.Control
-          type="email"
-          value={userData.email}
-          onChange={(event) => setUserData({ ...userData, email: event.target.value })}
-          placeholder='Email'
-        />
-      </Form.Group>
-      <Button className='btn-form' type="submit"  disabled={ !isFormValid() } >
-        Ingresar
-      </Button>
-    </Form> */}
 
+    {/* registrar nuevo usuario manual  */}
+
+    {/*  ingresar con fb  */}
       <div className="login-options mt-4">
         <h4>También puedes ingresar con:</h4>
         <div className="social-icons">

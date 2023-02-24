@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import "./Feed-Styles.css";
 import Publisher from "../../components/Publisher/Publisher";
 import { ImLinkedin2,ImGithub ,ImEvil2} from "react-icons/im";
+
 function Feed() {
+
   return (
     <div className="container container-feed col-10 ">
       <div className="col col-2 column-hashes">
@@ -29,7 +31,7 @@ function Feed() {
           </div>
         </Link>
       </div>
-
+        
       <Publisher className="publisher-container" />
 
       <div className="col col-3 data-user ">info</div>
