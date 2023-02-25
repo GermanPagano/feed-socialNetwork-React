@@ -15,9 +15,35 @@ export const UserProvider = (props) => {
     postCreated : [],
   });
 
+
+  
+  //registrarse
+  const Register =  (infoUser, userName ) => {
+    setUserData({
+      ...userData,
+      username: infoUser.displayName ? infoUser.displayName : userName,
+      email: infoUser.email,
+      imgUrl: infoUser.photoURL,
+      
+    });
+    
+    // Guardar los datos del usuario en localStorage
+    localStorage.setItem(
+      "userData",
+      JSON.stringify({
+      username: infoUser.displayName ? infoUser.displayName : userName,
+      email: infoUser.email,
+      imgUrl: infoUser.photoURL,
+      })
+    );
+  };
+
+
+
+  
   // iniciar sesion 
   const LoggIn = (infoUser, userName ) => {
-    console.log(infoUser);
+    
     setUserData({
       ...userData,
       username: infoUser.displayName ? infoUser.displayName : userName,
@@ -57,10 +83,11 @@ export const UserProvider = (props) => {
     });
   };
 
-  //registrarse
+
+  
 
   return (
-    <UserContext.Provider value={{ userData, LoggIn , logout }}>
+    <UserContext.Provider value={{ userData, LoggIn , logout , Register  }}>
       {props.children}
     </UserContext.Provider>
   );

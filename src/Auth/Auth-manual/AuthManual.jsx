@@ -22,11 +22,9 @@ function AuthManual() {
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            context.LoggIn(user , username);
+            context.Register(user , username);
       
           })
-
-
     
   };
 

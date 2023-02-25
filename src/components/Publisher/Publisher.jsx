@@ -116,8 +116,8 @@ function Publisher() {
                 )}
               </div>
               <div className="container btn-actions-post">
-                <button class="like-button">👍</button>
-                <button class="dislike-button">👎</button>
+                <button className="like-button">👍</button>
+                <button className="dislike-button">👎</button>
               </div>
             </div>
           ))}

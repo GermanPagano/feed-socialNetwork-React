@@ -3,8 +3,9 @@
     justify-content: center;
     color: rgb(97, 97, 96);
   }
-  
-  .form-register {
+
+.login-form {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,17 +13,17 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    
   }
   
-  .form-register label {
+  .login-container label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
-  .form-register input[type="text"],
-  .form-register input[type="email"],
-  .form-register input[type="password"] {
+
+  .login-input {
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
@@ -31,8 +32,12 @@
     background-color: #E5E5E5;
     box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
   }
+  .login-input:focus {
+    outline: none;
+    background-color: #DADADA;
+  }
   
-  .form-register button {
+  .login-button {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -43,14 +48,7 @@
     transition: background-color 0.2s ease-in-out;
   }
   
-  .form-register button:hover {
+  .login-button:hover {
     background-color: #F7CD05;
-  }
-  
-  .form-register input[type="text"]:focus,
-  .form-register input[type="email"]:focus,
-  .form-register input[type="password"]:focus {
-    outline: none;
-    background-color: #DADADA;
   }
   

@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HomePage />} />
             <Route path="/feed/:username" element={<Feed/>} />
-            <Route path="/perfil"  element={<Profile/>} />
+            <Route path="/perfil/:username"  element={<Profile/>} />
           </Routes>
 
         </BrowserRouter>

@@ -20,7 +20,7 @@ function Nav(props) {
 
   // ir al perfil
   const handleprofile = () => {
-    navigate("/perfil");
+    navigate(`/perfil/${username}`);
   };
 
   return (
