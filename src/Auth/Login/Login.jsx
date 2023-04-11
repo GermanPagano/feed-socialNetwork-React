@@ -10,6 +10,7 @@ function Login() {
   const context = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // Estado para el mensaje de error
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -34,20 +35,23 @@ function Login() {
         // Actualizar el estado del usuario en el contexto
         context.LoggIn(user, nombreUsuario);
       } else {
-        // Si el usuario no existe en la colección "usuarios", utilizar el correo electrónico como nombre de usuario
-        context.LoggIn(user, email);
+        // Si el usuario no existe en la colección "usuarios", mostrar mensaje de error
+        setErrorMessage("Usuario inexistente");
+        return;
       }
 
-      // Restablecer los campos de entrada
+      // Restablecer los campos de entrada y el mensaje de error
       setEmail("");
       setPassword("");
+      setErrorMessage("");
     } catch (error) {
-      console.log(error.message);
+      // Mostrar mensaje de error si la contraseña es incorrecta
+      setErrorMessage("Error en el user o la pw");
     }
   };
 
   return (
-    <div className="container">
+    <div className="container row">
       <form className="row login-form" onSubmit={handleLogin}>
         <span>
           <h3>🗝</h3>
@@ -76,6 +80,13 @@ function Login() {
           Ingresa
         </button>
       </form>
+<div className="container ">
+    <div className="mt-4" style={{color:'red'}}>
+    {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Mostrar mensaje de error si existe */}
+
+    </div>
+
+</div>
     </div>
   );
 }
