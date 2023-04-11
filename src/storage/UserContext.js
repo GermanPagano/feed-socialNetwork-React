@@ -8,20 +8,18 @@ export const UserProvider = (props) => {
     username: "",
     email: "",
     imgUrl: "",
-    age: "",
-    country: "",
-    city:"",
-    description: "",
-    postCreated : [],
+
   });
 
 
   
   //registrarse
   const Register =  (infoUser, userName ) => {
+
+    console.log(userName)
     setUserData({
       ...userData,
-      username: infoUser.displayName ? infoUser.displayName : userName,
+      username: userName,
       email: infoUser.email,
       imgUrl: infoUser.photoURL,
       
@@ -46,7 +44,7 @@ export const UserProvider = (props) => {
     
     setUserData({
       ...userData,
-      username: infoUser.displayName ? infoUser.displayName : userName,
+      username: userName , // Utilizar el nombre de usuario si está disponible, de lo contrario, el correo electrónico
       email: infoUser.email,
       imgUrl: infoUser.photoURL,
       
@@ -56,7 +54,7 @@ export const UserProvider = (props) => {
     localStorage.setItem(
       "userData",
       JSON.stringify({
-      username: infoUser.displayName ? infoUser.displayName : userName,
+      username: userName,
       email: infoUser.email,
       imgUrl: infoUser.photoURL,
       })

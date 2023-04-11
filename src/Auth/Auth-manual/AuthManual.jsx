@@ -1,8 +1,10 @@
 import React, { useState , useContext} from "react";
 import "./Auth-manual-styless.css";
-import { createUserWithEmailAndPassword  } from "firebase/auth";
+import { createUserWithEmailAndPassword   } from "firebase/auth";
 import { UserContext } from "../../storage/UserContext";
-import { authentication } from "../../services/firebase";
+import { authentication ,db } from "../../services/firebase";
+
+import { collection, addDoc } from "firebase/firestore";
 
 function AuthManual() {
   const context = useContext(UserContext);
@@ -18,13 +20,25 @@ function AuthManual() {
   const handleRegister = async (event) => {
     event.preventDefault();
     // Envía los datos de registro al servidor
-     await createUserWithEmailAndPassword(authentication , email , password )
-          .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            context.Register(user , username);
+    await createUserWithEmailAndPassword(authentication , email , password )
+    .then(async (userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      context.Register(user , username);
       
-          })
+      // Agregar información adicional del usuario a Firestore
+      const usuariosRef = collection(db, "usuarios");
+      await addDoc(usuariosRef, {
+        nombreUsuario: username, // Nombre de usuario
+        uid: user.uid, // ID de usuario
+        email: user.email, // Email de usuario
+        // Otros campos adicionales que desees guardar
+      });
+    })
+    .catch((error) => {
+      // Manejar errores
+      console.log(error)
+    });
     
   };
 

@@ -44,11 +44,7 @@ function Publisher() {
       <div className="publisher">
         <div className="comment-box">
           <div className="comment-box-header">
-            <img
-              className="comment-box-avatar"
-              src={imgUrl}
-              alt="foto de perfil"
-            />
+          {/* aca iria la img */}
             <div className="comment-box-user-info">
               <h5 className="comment-box-username">{username}</h5>
             </div>
