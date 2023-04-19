@@ -46,7 +46,7 @@ function Login() {
       setErrorMessage("");
     } catch (error) {
       // Mostrar mensaje de error si la contraseña es incorrecta
-      setErrorMessage("Error en el user o la pw");
+      setErrorMessage(  ` Algo no va bien  `);
     }
   };
 
@@ -80,13 +80,25 @@ function Login() {
           Ingresa
         </button>
       </form>
-<div className="container ">
-    <div className="mt-4" style={{color:'red'}}>
-    {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Mostrar mensaje de error si existe */}
+    <div className="mt-4" style={{color:'white'}}>
 
+    {errorMessage && 
+    <div style={{backgroundColor:'#EE5F43',borderRadius:'5px'}}><p className="error-message m-0">{errorMessage}</p>  
+          <button 
+          style={{
+              color: 'white ',
+              background: 'none',
+              border: 'none',
+              padding: '0',
+              margin: '10px',
+              cursor: 'pointer',
+              fontWeight:'bold',
+            }}
+          onClick={()=>alert('eee')}> 🔑Ayuda , Olvide mis Datos </button>
+    </div>} {/* Mostrar mensaje de error si existe */}
     </div>
 
-</div>
+
     </div>
   );
 }
