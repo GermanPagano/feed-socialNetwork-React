@@ -1,9 +1,7 @@
 .container  {
     display: flex;
     justify-content: center;
-    color: whitesmoke;
-    
-
+    color: rgb(40, 39, 39);
   }
 
 .login-form {
