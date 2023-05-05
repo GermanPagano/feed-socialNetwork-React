@@ -26,7 +26,7 @@ function HomePage() {
   };
 
   return (
-    <div className="fullview  ">
+    <div className="fullview  container">
       <video autoPlay muted loop id="bg-video">
         <source src={videoBackground} type="video/mp4" />
       </video>
@@ -54,7 +54,8 @@ function HomePage() {
                 <div
                   style={{
                     zIndex: "1",
-                    position:'relative'
+                    position:'relative',
+                    width:'90%'
                   }}
                 >
                   <p>
@@ -69,6 +70,7 @@ function HomePage() {
                         margin: "10px",
                         cursor: "pointer",
                         fontWeight: "bold",
+                        backgroundColor:'transparent'
                       }}
                       onClick={handleRegisterClick}
                     >
@@ -87,7 +89,6 @@ function HomePage() {
               <br />
               <AuthManual />
               <p>
-                {" "}
                 ¿ Tenes cuenta ?
                 <button
                   style={{
@@ -102,7 +103,7 @@ function HomePage() {
                   onClick={handleLoginClick}
                 >
                   Ingresa
-                </button>{" "}
+                </button>
               </p>
               {/* <AuthFB /> */}
             </div>

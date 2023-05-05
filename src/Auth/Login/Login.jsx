@@ -5,7 +5,6 @@ import { UserContext } from "../../storage/UserContext";
 import { authentication } from "../../services/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebase";
-import { CgArrowAlignH } from "react-icons/cg";
 
 function Login() {
   const context = useContext(UserContext);
