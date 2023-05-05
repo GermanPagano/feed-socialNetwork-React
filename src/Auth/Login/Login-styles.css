@@ -1,11 +1,10 @@
 .container  {
     display: flex;
     justify-content: center;
-    color: rgb(97, 97, 96);
+    color: whitesmoke;
+    
 
   }
-
-
 
 .login-form {
 
