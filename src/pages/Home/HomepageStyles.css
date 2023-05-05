@@ -9,7 +9,7 @@
     font-weight: 700;
     padding: 3rem;
     justify-content: space-around;
-
+    min-height: 100vh;
 }
 .text-container {
     display: block;
