@@ -1,13 +1,24 @@
 .fullview{
-    background: url('../../../public/bg-app.mp4');
-    background-size: cover;
+    background: transparent;
     display: flex;
-    color: white !important;
+    color: white ;
     min-height: 100vh;
     min-width: 100%;
-
+    
 }
-.text-container {
+
+#bg-video {
+    position: fixed ;
+    right: 20;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    background-size: cover;
+    opacity: 0.3;
+  }
+
+  .text-container {
     display: block;
     -webkit-text-stroke: 0.1rem rgba(0, 0, 0, 0.274);
 }
@@ -45,11 +56,9 @@
 @media (min-width: 800px) { 
     .fullview{
         padding: 3rem;
-        background: black;
-        background-repeat: repeat;
+        background: transparent;
         justify-content: center;
     }
 
-      
 
 }
