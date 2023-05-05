@@ -85,18 +85,6 @@ function Login() {
         </button>
       </form>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          margin: "1rem",
-        }}
-      >
-        <h4>Mood incognito</h4>
-        <button>
-          <CgArrowAlignH size={40}></CgArrowAlignH>
-        </button>
-      </div>
 
       <div className="mt-1" style={{ color: "white" }}>
         {errorMessage && (
