@@ -38,7 +38,7 @@ function HomePage() {
         <br/>
         <Login/>
         <br/>
-        <p> ¿ no tenes cuenta ? 
+        <p> ¿ No tenes cuenta ? 
         <button style={{
               color: 'white ',
               background: 'none',
