@@ -35,7 +35,7 @@ function HomePage() {
         {/* Renderizar el componente de inicio de sesión si es visible */}
         {isLoginVisible && (
           <> 
-          <div className="row" style={{display:'flex', justifyContent:'center'}}>
+          <div className="row" style={{display:'flex', justifyContent:'center' , marginTop:'1.8rem'}}>
             <h4> Ingresa con tu cuenta </h4>
             <Login/>
           </div>
