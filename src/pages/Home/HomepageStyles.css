@@ -1,6 +1,8 @@
 .fullview{
     min-width: 100%;
-    background-color: #504b4618;
+    /*background-color: #504b4618;*/
+    background: url('../../../public/bg-app.jpg');
+    background-size: cover;
     display: flex;
     color: white !important;
     font-style: oblique;

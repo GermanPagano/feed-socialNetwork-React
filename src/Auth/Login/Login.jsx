@@ -5,6 +5,7 @@ import { UserContext } from "../../storage/UserContext";
 import { authentication } from "../../services/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import { CgArrowAlignH } from "react-icons/cg";
 
 function Login() {
   const context = useContext(UserContext);
@@ -46,12 +47,15 @@ function Login() {
       setErrorMessage("");
     } catch (error) {
       // Mostrar mensaje de error si la contraseña es incorrecta
-      setErrorMessage(  ` Algo no va bien  `);
+      setErrorMessage(`⚠ Algo no va bien ⚠ `);
     }
   };
 
+  
+
   return (
-    <div className="container row" >
+    <div className="container row">
+ 
       <form className="row login-form" onSubmit={handleLogin}>
         <span>
           <h3>🗝</h3>
@@ -80,25 +84,44 @@ function Login() {
           Ingresa
         </button>
       </form>
-    <div className="mt-4" style={{color:'white'}}>
 
-    {errorMessage && 
-    <div style={{backgroundColor:'#EE5F43',borderRadius:'5px'}}><p className="error-message m-0">{errorMessage}</p>  
-          <button 
-          style={{
-              color: 'white ',
-              background: 'none',
-              border: 'none',
-              padding: '0',
-              margin: '10px',
-              cursor: 'pointer',
-              fontWeight:'bold',
-            }}
-          onClick={()=>alert('eee')}> 🔑Ayuda , Olvide mis Datos </button>
-    </div>} {/* Mostrar mensaje de error si existe */}
-    </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "1rem",
+        }}
+      >
+        <h4>Mood incognito</h4>
+        <button>
+          <CgArrowAlignH size={40}></CgArrowAlignH>
+        </button>
+      </div>
 
-
+      <div className="mt-1" style={{ color: "white" }}>
+        {errorMessage && (
+          <div>
+            <p className="error-message m-0">{errorMessage}</p>
+            <button
+              style={{
+                color: "white ",
+                background: "red",
+                border: "none",
+                padding: "8px",
+                margin: "10px",
+                cursor: "pointer",
+                fontWeight: "bold",
+                textDecoration: "underline",
+                borderRadius: "5px",
+              }}
+              onClick={() => alert("eee")}
+            >
+              Olvide mis Datos{" "}
+            </button>
+          </div>
+        )}{" "}
+        {/* Mostrar mensaje de error si existe */}
+      </div>
     </div>
   );
 }
