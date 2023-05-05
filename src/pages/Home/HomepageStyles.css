@@ -1,15 +1,11 @@
 .fullview{
-    min-width: 100%;
-    /*background-color: #504b4618;*/
-    background: url('../../../public/bg-app.jpg');
+    background: url('../../../public/bg-app.mp4');
     background-size: cover;
     display: flex;
     color: white !important;
-    font-style: oblique;
-    font-weight: 700;
-    padding: 3rem;
-    justify-content: space-around;
     min-height: 100vh;
+    min-width: 100%;
+
 }
 .text-container {
     display: block;
@@ -33,6 +29,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
     }
 
     .text-container {
@@ -42,5 +39,17 @@
         align-self: center;
         justify-content: center;
     }
+
+}
+
+@media (min-width: 800px) { 
+    .fullview{
+        padding: 3rem;
+        background: black;
+        background-repeat: repeat;
+        justify-content: center;
+    }
+
+      
 
 }

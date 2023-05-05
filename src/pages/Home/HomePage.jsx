@@ -25,7 +25,8 @@ function HomePage() {
   };
 
   return (
-    <div className="fullview container ">
+    <div className="fullview  ">
+
       {username !== "" ? (
         navigate(`/feed/${username}`) 
       ) : (
@@ -34,10 +35,13 @@ function HomePage() {
         {/* Renderizar el componente de inicio de sesión si es visible */}
         {isLoginVisible && (
           <> 
-        <h4> Ingresa con tu cuenta </h4>
-        <br/>
-        <Login/>
-        <br/>
+          <div className="row" style={{display:'flex', justifyContent:'center'}}>
+            <h4> Ingresa con tu cuenta </h4>
+            <Login/>
+          </div>
+
+  
+  
         <p> ¿ No tenes cuenta ? 
         <button style={{
               color: 'white ',
