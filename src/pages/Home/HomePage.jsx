@@ -55,7 +55,7 @@ function HomePage() {
                   style={{
                     zIndex: "1",
                     position:'relative',
-                    width:'90%'
+                    width:'100%'
                   }}
                 >
                   <p>
