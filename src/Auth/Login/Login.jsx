@@ -61,7 +61,7 @@ function Login() {
           <h3>🗝</h3>
         </span>
         <label>
-          Email:
+          Email
           <input
             className="login-input"
             type="email"
@@ -71,7 +71,7 @@ function Login() {
         </label>
 
         <label>
-          Password:
+          Password
           <input
             className="login-input"
             type="password"
