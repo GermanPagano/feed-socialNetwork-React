@@ -9,6 +9,10 @@
     cursor: pointer;
 
   }
+  .comment-box-button:hover{
+    background-color: #21b2c8a3;
+    color: #01454f;
+  }
 
   .comment-box-button:active{
     transform: translateY(2px);
