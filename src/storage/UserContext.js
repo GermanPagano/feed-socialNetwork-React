@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import defaultImage from "../assets/1297525.png";
 
 export const UserContext = createContext();
 
@@ -7,7 +8,7 @@ export const UserProvider = (props) => {
   const [userData, setUserData] = useState({
     username: "",
     email: "",
-    imgUrl: "",
+    imgUrl: defaultImage,
 
   });
 

@@ -3,7 +3,7 @@
   min-width: 300px;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
-  background: #f0f0f0;
+  background: #ccc;
   color: #272734;
   overflow-y: scroll;
   border-radius: 5px;
@@ -18,7 +18,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px 20px;
-  background-color: rgba(255, 248, 220, 0.533);
+  background-color: whitesmoke;
 }
 
 .comment-box-header {

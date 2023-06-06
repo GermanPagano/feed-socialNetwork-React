@@ -3,9 +3,9 @@ import BtnPublish from "../../components/Btn-Publish/BtnPublish";
 import { UserContext } from "../../storage/UserContext";
 import "./PublisherStyles.css";
 import { BsFillCameraFill } from "react-icons/bs";
+import defaultImage from "../../assets/1297525.png";
 
 function Publisher() {
-
   const context = useContext(UserContext);
   const { username, imgUrl } = context.userData;
   const muroRef = useRef(null);
@@ -22,8 +22,8 @@ function Publisher() {
     // Crear un nuevo objeto post con los valores actuales
     const newPost = { text: textValue, imgPub: fileValue };
 
-    // Agregar el nuevo post al arreglo de posts
-    setPost([...post, newPost]);
+    // Agregar el nuevo post al principio del arreglo de posts
+    setPost([newPost, ...post]);
 
     // Leer la imagen seleccionada y establecer la URL de la imagen
     if (fileValue && fileValue.type.startsWith("image/")) {
@@ -44,7 +44,11 @@ function Publisher() {
       <div className="publisher">
         <div className="comment-box">
           <div className="comment-box-header">
-          {/* aca iria la img */}
+            <img
+              className="post-avatar"
+              src={defaultImage}
+              alt="foto de perfil"
+            />
             <div className="comment-box-user-info">
               <h5 className="comment-box-username">{username}</h5>
             </div>
@@ -58,11 +62,7 @@ function Publisher() {
           </div>
 
           <div className="comment-box-footer">
-
-            <label
-              htmlFor="image-input"
-              style={{ cursor: "pointer" }}
-            >
+            <label htmlFor="image-input" style={{ cursor: "pointer" }}>
               <BsFillCameraFill
                 id="camera-icon"
                 type="file"
@@ -76,7 +76,7 @@ function Publisher() {
               type="file"
               className="file-input"
               ref={inputRef}
-              style={{display:'none'}}
+              style={{ display: "none" }}
             />
 
             <BtnPublish onClick={handlePublisher} />
@@ -91,13 +91,19 @@ function Publisher() {
               <div className="post-header">
                 <img
                   className="post-avatar"
-                  src={imgUrl}
+                  src={defaultImage}
                   alt="foto de perfil"
                 />
                 <div className="post-user-info">
                   <h5 className="post-username">{username}</h5>
                   <p className="post-timestamp">
-                    {new Date().toLocaleString()}
+                    {new Date().toLocaleString(undefined, {
+                      year: "numeric",
+                      month: "numeric",
+                      day: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
+                    })}
                   </p>
                 </div>
               </div>
@@ -124,3 +130,4 @@ function Publisher() {
 }
 
 export default Publisher;
+

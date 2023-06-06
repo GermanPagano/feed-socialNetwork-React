@@ -26,7 +26,7 @@ function HomePage() {
   };
 
   return (
-    <div className="fullview  container">
+    <div className="fullview">
       <video autoPlay muted loop id="bg-video">
         <source src={videoBackground} type="video/mp4" />
       </video>
@@ -84,11 +84,16 @@ function HomePage() {
 
           {/* Renderizar el componente de registro si es visible */}
           {isRegisterVisible && (
-            <div className="login-options mt-4 ">
+            <div className="login-options mt-4 "
+                              style={{
+                    zIndex: "1",
+                    position:'relative',
+                    width:'100%'
+                  }}>
               <h4> Crea tu cuenta </h4>
               <br />
               <AuthManual />
-              <p>
+              <p >
                 ¿ Tenes cuenta ?
                 <button
                   style={{
