@@ -11,9 +11,8 @@ Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje i
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Ejemplos](#ejemplos)
-- [Contribución](#contribución)
 - [Licencia](#licencia)
-- [Agradecimientos](#agradecimientos)
+
 
 ## Demo
 
