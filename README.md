@@ -21,7 +21,6 @@ Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje i
 
 ![home](https://github.com/GermanPagano/feed-socialNetwork-React/assets/80891761/2788d68f-94d7-409c-8e3a-cfce3158a7b8)
 ![feed](https://github.com/GermanPagano/feed-socialNetwork-React/assets/80891761/f4ad60c5-2481-477c-b61b-49a252b90afc)
-![feed-celular](https://github.com/GermanPagano/feed-socialNetwork-React/assets/80891761/cfc4f6d2-7c8d-423b-9d42-1932c9c1e1c1)
 ![profile](https://github.com/GermanPagano/feed-socialNetwork-React/assets/80891761/e6d580b8-bcc1-4cf3-a5c3-3e4c1d203f75)
 
 
