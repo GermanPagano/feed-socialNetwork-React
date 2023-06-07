@@ -1,4 +1,4 @@
-# ⚡ Feed 
+# ⚡ Feed  ⚡ 
 
 ¡Bienvenido a FEED, la red social que te permite conectar y compartir tus mensajes con la comunidad!
 Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje importante, FEED te brinda la plataforma perfecta para hacerlo.
