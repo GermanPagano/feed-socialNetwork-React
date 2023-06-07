@@ -30,10 +30,8 @@ En *FEED*, creemos en el poder de las palabras y en la capacidad de conectar a l
 Nuestra plataforma intuitiva y fácil de usar te permite compartir tus pensamientos, emociones y experiencias con una comunidad apasionada y receptiva.
 Construida con tecnologías web modernas, como React.js y , Firebase *FEED* combina una interfaz atractiva con una funcionalidad potente. 
 
-<span style="max-height: 20px; display: inline-block;">
-  ![React](https://reactjs.org/favicon.ico)
-  ![Firebase](https://firebase.google.com/favicon.ico)
-</span>
+
+![png-transparent-black-and-blue-atom-icon-screenshot-react-javascript-responsive-web-design-github-angularjs-github-logo-electric-blue-signage](https://github.com/GermanPagano/feed-socialNetwork-React/assets/80891761/8f090861-fe43-4794-a2a3-e67b68ab8be6)
 
 
 
