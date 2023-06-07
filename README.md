@@ -29,7 +29,7 @@ Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje i
 En FEED, creemos en el poder de las palabras y en la capacidad de conectar a las personas a través de ellas. 
 Nuestra plataforma intuitiva y fácil de usar te permite compartir tus pensamientos, emociones y experiencias con una comunidad apasionada y receptiva.
 
-Construida con tecnologías web modernas, como #React y #Firebase, *FEED* combina una interfaz atractiva con una funcionalidad potente. Ya sea que estés en busca de inspiración, desees conectarte con personas afines o simplemente desees compartir tu voz con el mundo, FEED es el lugar perfecto para hacerlo.
+Construida con tecnologías web modernas, como ##React y #Firebase, *FEED* combina una interfaz atractiva con una funcionalidad potente. Ya sea que estés en busca de inspiración, desees conectarte con personas afines o simplemente desees compartir tu voz con el mundo, FEED es el lugar perfecto para hacerlo.
 
 ## Características
 
