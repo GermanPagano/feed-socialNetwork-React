@@ -17,9 +17,9 @@ Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje i
 
 ## Demo
 
-En esta sección, puedes proporcionar enlaces o capturas de pantalla que muestren una demostración de tu proyecto. Por ejemplo:
+¡Echa un vistazo a nuestra [demostración en vivo](https://feed-social-network-react.vercel.app) para experimentar la magia de FEED!
 
-![Demo](/ruta/a/la/imagen.png)
+
 
 ## Descripción
 
