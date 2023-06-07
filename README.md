@@ -29,7 +29,10 @@ Ya sea que desees contar una historia, dejar un saludo o transmitir un mensaje i
 En *FEED*, creemos en el poder de las palabras y en la capacidad de conectar a las personas a través de ellas. 
 Nuestra plataforma intuitiva y fácil de usar te permite compartir tus pensamientos, emociones y experiencias con una comunidad apasionada y receptiva.
 Construida con tecnologías web modernas, como React.js y , Firebase *FEED* combina una interfaz atractiva con una funcionalidad potente. 
-![React](https://reactjs.org/favicon.ico) ![Firebase](https://firebase.google.com/favicon.ico)
+
+![React](https://reactjs.org/favicon.ico) 
+![Firebase](https://firebase.google.com/favicon.ico)
+
 ## Características
 
 Enumera las principales características y funcionalidades de tu proyecto. Puedes organizarlas en forma de lista o describirlas en párrafos cortos.
